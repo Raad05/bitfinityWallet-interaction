@@ -1,5 +1,15 @@
 {
   "canisters": {
+    "icp_ledger_canister": {
+      "type": "custom",
+      "candid": "https://raw.githubusercontent.com/dfinity/ic/afe1a18291987667fdb52dac3ca44b1aebf7176e/rs/rosetta-api/icp_ledger/ledger.did",
+      "wasm": "https://download.dfinity.systems/ic/afe1a18291987667fdb52dac3ca44b1aebf7176e/canisters/ledger-canister.wasm.gz",
+      "remote": {
+        "id": {
+          "ic": "ryjl3-tyaaa-aaaaa-aaaba-cai"
+        }
+      }
+    },
     "internet_identity": {
       "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
       "frontend": {},
@@ -16,12 +26,8 @@
       "type": "motoko"
     },
     "plugWallet-interaction-frontend": {
-      "dependencies": [
-        "plugWallet-interaction-backend"
-      ],
-      "source": [
-        "src/plugWallet-interaction-frontend/dist"
-      ],
+      "dependencies": ["plugWallet-interaction-backend"],
+      "source": ["src/plugWallet-interaction-frontend/dist"],
       "type": "assets",
       "workspace": "plugWallet-interaction-frontend"
     }
